@@ -193,6 +193,7 @@ nav{
     font-size: 2rem;
     height: 2rem;
   }
+  font-family: 'dana demibold', sans-serif !important;
 }
 
 .paragraph{
@@ -213,7 +214,7 @@ summary{
 
 h1 span{
   font-family: 'dana demibold', sans-serif;
-  font-weight: 100;
+  font-weight: 600;
 }
 
 .skills{
