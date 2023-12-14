@@ -1,0 +1,56 @@
+Hello I am TIANA ANNAICK
+Front End developer and UI designer 
+
+TIANA ANNAICK
+About me
+
+MES SERVICES 
+Web page creation
+I create customized and adapted web pages, using the latest and most efficient technologies.
+
+Website maintenance and improvement
+I take care of the maintenance and improvement of your website, by fixing bugs, optimizing SEO, adding features and improving user experience.
+
+UI Design
+I design ergonomic, intuitive and aesthetic application interfaces, taking into account the needs and expectations of the end users.
+
+3D design:  I produce 3D plan models, using professional software and respecting the technical and artistic constraints of the project.
+
+Technologies
+I master all the technologies and tools needed for design and development:
+
+Programming languages : python, C, C++, SQL, VBA, QML, Script shell
+
+web Technologies : HTML, CSS, JS, , Sass, Jquery, less, postcss
+
+Frameworks and librairies: Bootstrap, Tailwind, React, jQUERY Ant design, MUI, QT
+
+Development tools 
+ : NPM, Vite, webpack, git, github
+
+Graphic design software : Adobe Illustrator, photoshop, XD, Figma, SketchUp, Vray
+
+PROJETS
+Application development
+Todo
+A fully functional todo application for managing tasks. All CRUD operations are included and tasks are stored using the web storage API.
+
+Shopee
+A react-based e-commerce prototype, using fakestore API. Users can browse the catalog, add products to shopping cart and make a payment. 
+
+Wakanda
+A complete website dedicated to the world of Wakanda. You'll find storybooks, character info and videos, plus a quiz for the more adventurous. All presented with animations and transitions to make the experience fluid and unforgettable. 
+
+LoginPage 
+An interactive and animated login page to add a touch of fun to your business and entertain your users.
+
+Batman
+My first project. An complete application dedicated to the world of the Dark Knight, it lists all  informations and stories about Batman. A quiz is included for those who want to test their fan skills.
+
+Gevis
+A desktop application for managing visitors to tourist sites, based on Qt Quick and SQLite as a database management system, it enables CRUD operations and efficient management of visitors and all the information concerning them. 
+
+Graphic Design 
+
+00afff
+00ff8f
