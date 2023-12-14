@@ -6,6 +6,8 @@ import Hamburger from 'hamburger-react'
 import { useState } from 'react'
 import Headroom from 'react-headroom'
 
+import background from '/pngtree__photo1.png'
+
 const {Title, Paragraph, Text} = Typography
 const items = [
     {
@@ -43,7 +45,7 @@ export default function Header(){
                 <p className='header-presentation__name-after'>TIANA</p>
                 <Title style={{fontSize: '1rem', color: 'rgb(62, 78, 92)', marginBottom: '30px'}}>Front-end developer & UI/UX Designer</Title>
                 <Button icon={<DownloadOutlined></DownloadOutlined>} href='/annaick__CV.pdf' download classNames='fluent' type='primary' aria-label='click to download cv'>DOWNLOAD CV</Button>
-                <img src="/pngtree__photo1.png" alt="web development illustration" className='background' />
+                <img src={background} alt="web development illustration" className='background' />
             </Flex>
         </div>
         <div className='info'>
