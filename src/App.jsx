@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ConfigProvider ,Layout, Dropdown, Button, Flex, Skeleton } from 'antd'
+import { ConfigProvider , Skeleton, Space } from 'antd'
 import   Headroom  from 'react-headroom'
 import './App.css'
 import Header from './components/header'
@@ -22,11 +22,16 @@ function App() {
         components:{
         }
       }}>
-      <Skeleton active loading={loading}>
+      <Skeleton style={{padding: '2rem'}} active paragraph={{rows: 6}}  loading={loading}>
         <Header />
         <Main />
         <Footer />
       </Skeleton>
+      <Skeleton title active loading={loading} style={{padding: '2rem'}}></Skeleton>
+      <Skeleton title active loading={loading} style={{padding: '2rem'}}></Skeleton>
+      <Skeleton title active loading={loading} style={{padding: '2rem'}}></Skeleton>
+      <Skeleton title active loading={loading} style={{padding: '2rem'}}></Skeleton>
+      <Skeleton title active loading={loading} style={{padding: '2rem'}}></Skeleton>
       </ConfigProvider>
     </>
   )

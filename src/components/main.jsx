@@ -106,59 +106,42 @@ const list = [
     }
 ]
 
+const services = [
+    {icon: <ToolOutlined></ToolOutlined>, heading: 'Web page creation', content: 'Customized and adapted web pages.'},
+    {icon: <UpCircleOutlined></UpCircleOutlined>, heading: 'Website maintenance', content: 'Maintenance and improvement of your website'},
+    {icon: <EditOutlined></EditOutlined>, heading: 'UI/UX Design', content: 'I design ergonomic, intuitive and aesthetic application interfaces.'},
+    {icon: <CodeSandboxOutlined></CodeSandboxOutlined>, heading: '3D design', content: '3D plan models, respecting the technical and artistic constraints.'},
+]
+
+
+
 const {Title, Paragraph, Text, Link} = Typography
 export default function Main(){
     return (<>
         <section className="services" style={{marginBottom: '100px'}}>
-            <Title id="services"><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>SERVICES</LinearGradient></Title>
-            <Space direction="vertical">
-                <Space>
-                    <Card className="dark">
+            <Title id="services" className="sectionHeading"><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>SERVICES</LinearGradient></Title>
+            <List style={{padding: '1rem'}} grid={{column: 2, md: 4, lg: 4, xl: 4, xxl: 4, gutter: 15}} dataSource={services} renderItem={(item)=>{
+                return (
+                    <List.Item>
+                    <Card className="dark service">
                         <Space direction="vertical">
-                            <Avatar shape="square" size='large' className="green" icon={<ToolOutlined></ToolOutlined>}></Avatar>
-                            <Title style={{color: 'white', fontSize: '1rem'}} level={2}>Web page creation</Title>
-                            <Paragraph style={{fontSize: '0.8rem', color: 'white', textAlign: 'justify', wordBreak: 'break-all', hyphens: 'auto', lineBreak:'auto', fontFamily: 'dana light, sans-serif'}}>
-                                Customized and adapted web pages.
+                            <Avatar shape="square" size='large' className="green service__icon" icon={item.icon}></Avatar>
+                            <Title className="service__heading" style={{color: 'white', fontSize: '1rem'}} level={2}>{item.heading}</Title>
+                            <Paragraph className="service__content paragraph" style={{fontSize: '0.8rem', color: 'white', textAlign: 'justify', wordBreak: 'break-all', hyphens: 'auto', lineBreak:'auto', fontFamily: 'dana light, sans-serif'}}>
+                                {item.content}
                             </Paragraph>
                         </Space>
                     </Card>
-                    <Card className="dark">
-                        <Space direction="vertical">
-                            <Avatar shape="square" size='large' className="green" icon={<UpCircleOutlined></UpCircleOutlined>}></Avatar>
-                            <Title style={{color: 'white', fontSize: '1rem'}} level={2}>Website maintenance</Title>
-                            <Paragraph style={{fontSize: '0.8rem', color: 'white', textAlign: 'justify', wordBreak: 'break-all', hyphens: 'auto', lineBreak:'auto', fontFamily: 'dana light, sans-serif'}}>
-                                Maintenance and improvement of your website.
-                            </Paragraph>
-                        </Space>
-                    </Card>
-                </Space>
-                <Space>
-                    <Card className="dark">
-                        <Space direction="vertical">
-                            <Avatar shape="square" size='large' className="green" icon={<EditOutlined></EditOutlined>}></Avatar>
-                            <Title style={{color: 'white', fontSize: '1rem'}} level={2}>UI Design</Title>
-                            <Paragraph style={{fontSize: '0.8rem', color: 'white', textAlign: 'justify', wordBreak: 'break-all', hyphens: 'auto', lineBreak:'auto', fontFamily: 'dana light, sans-serif'}}>
-                            I design ergonomic, intuitive and aesthetic application interfaces.
-                            </Paragraph>
-                        </Space>
-                    </Card>
-                    <Card className="dark">
-                        <Space direction="vertical">
-                            <Avatar shape="square" size='large' className="green" icon={<CodeSandboxOutlined></CodeSandboxOutlined>}></Avatar>
-                            <Title style={{color: 'white', fontSize: '1rem'}} level={2}>3D design</Title>
-                            <Paragraph style={{fontSize: '0.8rem', color: 'white', textAlign: 'justify', wordBreak: 'break-all', hyphens: 'auto', lineBreak:'auto', fontFamily: 'dana light, sans-serif'}}>
-                                3D plan models, respecting the technical and artistic constraints.
-                            </Paragraph>
-                        </Space>
-                    </Card>
-                </Space>
-            </Space>
+                </List.Item>
+                )
+            }}>
+            </List>
         </section>
         <section className="skills">
-            <Title id="skills" style={{margin: '0px'}}><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>SKILLS</LinearGradient></Title>
-            <List dataSource={list} renderItem={(item)=>{
+            <Title className="sectionHeading" id="skills" style={{margin: '0px'}}><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>SKILLS</LinearGradient></Title>
+            <List itemLayout="horizontal" dataSource={list} renderItem={(item)=>{
                  return (<List.Item>
-                    <List grid={{column: 2, gutter: 50}} itemLayout="horizontal" header={<h3>{item.heading}</h3>} dataSource={item.content} renderItem={(tech)=>{
+                    <List grid={{column: 2, gutter: 100, sm: 4, md: 4, lg: 4, xl: 4, xxl: 4}} itemLayout="horizontal" header={<h3>{item.heading}</h3>} dataSource={item.content} renderItem={(tech)=>{
                         return (<List.Item style={{height: '3rem'}}>
                             <List.Item.Meta style={{display: 'flex', alignItems: 'center', width: '100%'}} avatar={<img src={tech.icon} className="icon"></img>} title={tech.title}></List.Item.Meta>
                         </List.Item>)
@@ -168,10 +151,10 @@ export default function Main(){
             </List>
         </section>
         <section className="projects" style={{marginBottom: '50px'}}>
-            <Title id="projects"><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>Projects</LinearGradient></Title>
+            <Title className="sectionHeading" id="projects"><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>PROJECTS</LinearGradient></Title>
             <Flex style={{padding: '1rem 3rem'}} align="center" gap={12}><WeiboCircleOutlined></WeiboCircleOutlined><Title level={2} style={{color: 'rgb(62, 78, 92)', fontSize: '1.2rem', textAlign: 'left', margin: '0px'}}> Web </Title></Flex>
-            <Paragraph style={{padding: '1rem', textAlign: 'left'}}>Here are a few excerpts from my front-end projects. Most of the time, I use <em>react</em> for my applications. It allows great flexibility in the development process.</Paragraph>
-            <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]} className="mySwiper">
+            <Paragraph className="paragraph" style={{padding: '1rem', textAlign: 'left' ,marginBottom: '50px'}}>Here are a few excerpts from my front-end projects. Most of the time, I use <em>react</em> for my applications. It allows great flexibility in the development process.</Paragraph>
+            <Swiper style={{marginBottom: '5rem'}} effect={"cards"} grabCursor={true} modules={[EffectCards]} className="mySwiper">
                 <SwiperSlide>
                     <Card actions={[<Button type="link" icon={<EyeOutlined></EyeOutlined>} target="_blank" style={{color: 'black'}} href="https://Annaick.github.io/toDo">Preview</Button>, <Button style={{color: 'black'}} target="_blank" type="link" icon={<CodeOutlined></CodeOutlined>} href="https://github.com/Annaick/toDo">Code</Button>]}
                      className="project" cover={<img className="cover" src="/todo.png" alt="Todo application pic"></img>}>
@@ -205,13 +188,15 @@ export default function Main(){
                 </SwiperSlide>
             </Swiper>
             <Flex style={{padding: '1rem 3rem'}} align="center" gap={12}><EditFilled></EditFilled><Title level={2} style={{color: 'rgb(62, 78, 92)', fontSize: '1.2rem', textAlign: 'left', margin: '0px'}}> Design </Title></Flex>
-            <Paragraph style={{padding: '1rem', textAlign: 'left'}}>I'm first and foremost a <em>front developer</em>, but I think a good front-end developer needs to know about design. And so I design all my projects and take inspiration from everywhere</Paragraph>
-            <Carousel  style={{height: '180px', margin: '0rem 1rem', borderRadius: '1rem 1rem'}} autoplay>
-                <div className="carousel__container"><Image loading="lazy" className="slider-img" src="/MirrorLogin-01.jpg" alt="Mirror login page design" /></div>
-                <div className="carousel__container"><Image loading="lazy" className="slider-img" src="/coffee-01.jpg" alt="coffee shop website design" /></div>
-                <div className="carousel__container"><Image loading="lazy" className="slider-img" src="/nike-01.jpg" alt="Nike card design" /></div>
-                <div className="carousel__container"><Image loading="lazy" className="slider-img" src="/todo-01.jpg" alt="Todo app design" /></div>
+            <Paragraph className="paragraph" style={{padding: '1rem', textAlign: 'left', marginBottom: '5rem'}}>I'm first and foremost a <em>front developer</em>, but I think a good front developer needs to know about design. And so I design all my projects and take inspiration from everywhere</Paragraph>
+            <Flex justify="center">
+            <Carousel  style={{ margin: '0rem 1rem', borderRadius: '1rem 1rem', maxWidth: '600px'}} autoplay>
+                <Image loading="lazy" className="slider-img" src="/MirrorLogin-01.jpg" alt="Mirror login page design" />
+                <Image loading="lazy" className="slider-img" src="/coffee-01.png" alt="coffee shop website design" />
+                <Image loading="lazy" className="slider-img" src="/nike-01.png" alt="Nike card design" />
+                <Image loading="lazy" className="slider-img" src="/todo-01.jpg" alt="Todo app design" />
             </Carousel>
+            </Flex>
         </section>
     </>)
 }
