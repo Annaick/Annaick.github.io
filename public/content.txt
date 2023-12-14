@@ -3,7 +3,6 @@ Front End developer and UI designer
 
 TIANA ANNAICK
 About me
-I am a 19-year-old computer science student. I am passionate about web design and development, and I always bring a touch of innovation to my projects for my own satisfaction and for my clients' satisfaction.
 
 MES SERVICES 
 Web page creation
@@ -20,11 +19,11 @@ I design ergonomic, intuitive and aesthetic application interfaces, taking into 
 Technologies
 I master all the technologies and tools needed for design and development:
 
-Programming languages : C, C++, SQL, VBA, QML, Script shell
+Programming languages : python, C, C++, SQL, VBA, QML, Script shell
 
 web Technologies : HTML, CSS, JS, , Sass, Jquery, less, postcss
 
-Frameworks and librairies: Tailwind, React, Ant design, MUI, , QT
+Frameworks and librairies: Bootstrap, Tailwind, React, jQUERY Ant design, MUI, QT
 
 Development tools 
  : NPM, Vite, webpack, git, github
