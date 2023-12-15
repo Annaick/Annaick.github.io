@@ -6,11 +6,14 @@ import Header from './components/header'
 import Main from './components/main'
 import Footer from './components/footer'
 
+
+
 function App() {
   const [loading, setLoading] = useState (true)
-  useEffect (()=>{setLoading(false)}, [])
+  useEffect (()=>{setTimeout(()=>setLoading(false), 3000)}, [])
   return (
     <>
+
       <ConfigProvider
       theme={{
         token:{
@@ -23,15 +26,13 @@ function App() {
         }
       }}>
       <Skeleton style={{padding: '2rem'}} active paragraph={{rows: 6}}  loading={loading}>
-        <Header />
+        <Header setLoading={setLoading} />
         <Main />
         <Footer />
       </Skeleton>
       <Skeleton title active loading={loading} style={{padding: '2rem'}}></Skeleton>
-      <Skeleton title active loading={loading} style={{padding: '2rem'}}></Skeleton>
-      <Skeleton title active loading={loading} style={{padding: '2rem'}}></Skeleton>
-      <Skeleton title active loading={loading} style={{padding: '2rem'}}></Skeleton>
-      <Skeleton title active loading={loading} style={{padding: '2rem'}}></Skeleton>
+      <Skeleton.Image title active loading={loading} style={{padding: '2rem', width: '300px', height: '300px'}}></Skeleton.Image>
+      <Skeleton title active loading={loading} paragraph={{rows: 20}} style={{padding: '2rem'}}></Skeleton>
       </ConfigProvider>
     </>
   )
