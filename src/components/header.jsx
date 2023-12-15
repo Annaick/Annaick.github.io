@@ -20,7 +20,7 @@ const items = [
     },
 ]
 
-export default function Header(){
+export default function Header(prop){
     const [open, SetOpen]= useState (false)
     const [message] = useTypewriter({
         words: ['Hello, world!', 'How are you?', 'I am'],
@@ -32,7 +32,7 @@ export default function Header(){
                     <Dropdown  menu={{items}} open={open} onOpenChange={e=>SetOpen(!open)} trigger={'click'}>
                         <Button className='center' aria-label='Navigation menu'  type='text' icon={<Hamburger toggled={open} direction='right' hideOutline label='Open navigation menu' rounded  size={20} color='rgb(62, 78, 92)'></Hamburger>}></Button>
                     </Dropdown>
-                    <img src="/annaick__logo.svg " className='icon logo' alt="annaick logo" />
+                    <img src={prop.logo} className='icon logo' alt="annaick logo" />
                 </Flex>
             </nav>
         </Headroom>
@@ -43,7 +43,7 @@ export default function Header(){
                 <p className='header-presentation__name-after'>TIANA</p>
                 <Title style={{fontSize: '1rem', color: 'rgb(62, 78, 92)', marginBottom: '30px'}}>Front-end developer & UI/UX Designer</Title>
                 <Button icon={<DownloadOutlined></DownloadOutlined>} href='/annaick__CV.pdf' download classNames='fluent' type='primary' aria-label='click to download cv'>DOWNLOAD CV</Button>
-                <img src="/pngtree__photo1.png" alt="web development illustration" className='background' />
+                <img src={prop.bg} alt="web development illustration" className='background' />
             </Flex>
         </div>
         <div className='info'>
