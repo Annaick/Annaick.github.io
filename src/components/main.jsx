@@ -120,14 +120,14 @@ export default function Main(){
     return (<>
         <section className="services" style={{marginBottom: '100px'}}>
             <Title id="services" className="sectionHeading"><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>SERVICES</LinearGradient></Title>
-            <List style={{padding: '1rem'}} grid={{column: 2, md: 4, lg: 4, xl: 4, xxl: 4, gutter: 15}} dataSource={services} renderItem={(item)=>{
+            <List className="servicesList" style={{padding: '1rem'}} grid={{column: 2, md: 4, lg: 4, xl: 4, xxl: 4, gutter: 15}} dataSource={services} renderItem={(item)=>{
                 return (
                     <List.Item>
-                    <Card className="dark service">
+                    <Card size="small" className="dark service">
                         <Space direction="vertical">
                             <Avatar shape="square" size='large' className="green service__icon" icon={item.icon}></Avatar>
                             <Title className="service__heading" style={{color: 'white', fontSize: '1rem'}} level={2}>{item.heading}</Title>
-                            <Paragraph className="service__content paragraph" style={{fontSize: '0.8rem', color: 'white', textAlign: 'justify', wordBreak: 'break-all', hyphens: 'auto', lineBreak:'auto', fontFamily: 'dana light, sans-serif'}}>
+                            <Paragraph className="service__content" style={{fontSize: '0.8rem', color: 'white', textAlign: 'justify', wordBreak: 'break-all', hyphens: 'auto', lineBreak:'auto', fontFamily: 'dana light, sans-serif'}}>
                                 {item.content}
                             </Paragraph>
                         </Space>
@@ -139,9 +139,9 @@ export default function Main(){
         </section>
         <section className="skills">
             <Title className="sectionHeading" id="skills" style={{margin: '0px'}}><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>SKILLS</LinearGradient></Title>
-            <List itemLayout="horizontal" dataSource={list} renderItem={(item)=>{
+            <List className="skillsList" itemLayout="horizontal" dataSource={list} renderItem={(item)=>{
                  return (<List.Item>
-                    <List grid={{column: 2, gutter: 100, sm: 4, md: 4, lg: 4, xl: 4, xxl: 4}} itemLayout="horizontal" header={<h3>{item.heading}</h3>} dataSource={item.content} renderItem={(tech)=>{
+                    <List style={{width: '100%'}} grid={{column: 2, gutter: 100, sm: 4, md: 4, lg: 4, xl: 4, xxl: 4}} itemLayout="horizontal" header={<h3>{item.heading}</h3>} dataSource={item.content} renderItem={(tech)=>{
                         return (<List.Item style={{height: '3rem'}}>
                             <List.Item.Meta style={{display: 'flex', alignItems: 'center', width: '100%'}} avatar={<img src={tech.icon} className="icon"></img>} title={tech.title}></List.Item.Meta>
                         </List.Item>)
@@ -194,7 +194,7 @@ export default function Main(){
                 <Image loading="lazy" className="slider-img" src="/MirrorLogin-01.jpg" alt="Mirror login page design" />
                 <Image loading="lazy" className="slider-img" src="/coffee-01.png" alt="coffee shop website design" />
                 <Image loading="lazy" className="slider-img" src="/nike-01.png" alt="Nike card design" />
-                <Image loading="lazy" className="slider-img" src="/todo-01.jpg" alt="Todo app design" />
+                <Image loading="lazy" className="slider-img" src="/todo-01.png" alt="Todo app design" />
             </Carousel>
             </Flex>
         </section>
