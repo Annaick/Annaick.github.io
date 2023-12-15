@@ -41,7 +41,7 @@ export default function Header(prop){
                 <p className='header-presentation__name-before'>{message}</p>
                 <p className='header-presentation__name'><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>ANNAICK</LinearGradient></p>
                 <p className='header-presentation__name-after'>TIANA</p>
-                <Title style={{fontSize: '1rem', color: 'rgb(62, 78, 92)', marginBottom: '30px'}}>Front-end developer & UI/UX Designer</Title>
+                <Title style={{fontSize: '1rem', color: 'rgb(62, 78, 92)', marginBottom: '30px'}}>Front-end react eveloper & UI/UX Designer</Title>
                 <Button icon={<DownloadOutlined></DownloadOutlined>} href='/annaick__CV.pdf' download classNames='fluent' type='primary' aria-label='click to download cv'>DOWNLOAD CV</Button>
                 <img src={prop.bg} alt="web development illustration" className='background' />
             </Flex>
@@ -50,13 +50,13 @@ export default function Header(prop){
             <Flex style={{marginLeft: 'auto', marginRight: 'auto'}} justify='space-around' vertical align='center'>
                 <Space className='lightText'><HomeOutlined></HomeOutlined> <Text className='lightText paragraph'>Fianarantsoa/Madagascar</Text></Space>
                 <Space className='lightText'><ReadOutlined></ReadOutlined> <Text className='lightText paragraph'>Student at ENI</Text></Space>
-                <Space><Text className='lightText paragraph'>He/Him - 19 </Text></Space>
+                <Space><Text className='lightText paragraph'>He/Him - 19 year</Text></Space>
             </Flex>
         </div>
         <summary>
             
             <Title className='sectionHeading' id='about'><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>ABOUT ME</LinearGradient></Title>
-            <Paragraph className='paragraph' style={{textAlign: 'justify', fontFamily: 'dana light, sans-serif'}}>I am a 19-year-old <em>computer science student</em>. I am passionate about <em>web design and development</em>, and I always bring a touch of innovation to my projects for my own satisfaction and for my clients' satisfaction.</Paragraph>
+            <Paragraph className='paragraph' style={{textAlign: 'justify', fontFamily: 'dana light, sans-serif'}}>I am a <em>computer science student</em>. I am passionate about <em>web design and development</em>, and I always bring a touch of innovation to my projects for my own satisfaction and for my clients' satisfaction.</Paragraph>
         </summary>
     </>)
 }
