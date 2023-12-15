@@ -15,7 +15,6 @@ function App() {
   const [lgLoaded, setLgLoaded] = useState (false)
   const [bgLoaded, setBgLoaded] = useState (false)
 
-
   useEffect (()=>{
     const logo = new Image();
     const bg = new Image();

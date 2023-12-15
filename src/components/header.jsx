@@ -47,9 +47,9 @@ export default function Header(prop){
             </Flex>
         </div>
         <div className='info'>
-            <Flex justify='space-around'>
-                <Space className='lightText'><HomeOutlined></HomeOutlined> <Text className='lightText'>Fianarantsoa/Madagascar</Text></Space>
-                <Space className='lightText'><ReadOutlined></ReadOutlined> <Text className='lightText'>Student at ENI</Text></Space>
+            <Flex style={{marginLeft: 'auto', marginRight: 'auto'}} justify='space-around' vertical align='center'>
+                <Space className='lightText'><HomeOutlined></HomeOutlined> <Text className='lightText paragraph'>Fianarantsoa/Madagascar</Text></Space>
+                <Space className='lightText'><ReadOutlined></ReadOutlined> <Text className='lightText paragraph'>Student at ENI</Text></Space>
             </Flex>
         </div>
         <summary>
