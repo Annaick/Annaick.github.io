@@ -64,7 +64,6 @@ function App() {
         <Footer />
       </Skeleton>
       <Skeleton title active loading={loading} style={{padding: '2rem'}}></Skeleton>
-      <Skeleton.Image title active loading={loading} style={{padding: '2rem', width: '300px', height: '300px'}}></Skeleton.Image>
       <Skeleton title active loading={loading} paragraph={{rows: 20}} style={{padding: '2rem'}}></Skeleton>
       </ConfigProvider>
     </>
