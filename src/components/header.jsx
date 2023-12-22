@@ -7,6 +7,7 @@ import { useState, Suspense } from 'react'
 import { Img, resource } from 'react-suspense-img'
 import Headroom from 'react-headroom'
 import { Slide, Fade } from "react-awesome-reveal"
+import Goo from 'gooey-react'
 
 const {Title, Paragraph, Text} = Typography
 const items = [
@@ -50,9 +51,23 @@ export default function Header(prop){
                 <p className='header-presentation__name-after'>TIANA</p>
                 <Title style={{fontSize: '1rem', color: 'rgb(62, 78, 92)', marginBottom: '30px'}}>Front-end react eveloper & UI/UX Designer</Title>
                 <Button icon={<DownloadOutlined></DownloadOutlined>} href='/annaick__CV.pdf' download classNames='fluent' type='primary' aria-label='click to download cv'>DOWNLOAD CV</Button>
-                <Suspense fallback={<Skeleton.Image active style={{width:'100vw', height:'350px', marginTop: '50px'}}></Skeleton.Image>}>
+                <div className='background' style={{position: 'relative'}}>
+                <Goo>
+                <svg className='background'>
+                    <g style={{animation: 'left 5s linear infinite'}}>
+                        <circle style={{animation: 'right 3s linear infinite'}} cx="40%" cy="40%" fill='#7b2dac' r='18%' />
+                        <circle cx="55%" cy="55%" fill='#3b2dac' r='20%'/>
+                        <circle cx="40%" cy="40%" fill='#2d5eac' r='18%'/>
+                    </g>
+                </svg>
+                </Goo>
+                <section className="profil">
+                    <img src="/annaick__photo--sm.jpg" alt="Annaick profil pic" />
+                </section>
+                </div>
+                {/*<Suspense fallback={<Skeleton.Image active style={{width:'100vw', height:'350px', marginTop: '50px'}}></Skeleton.Image>}>
                     <Img src='/pngtree__photo1.png' alt='Web development illustration' className='background'></Img>
-                </Suspense>
+                </Suspense>*/}
             </Flex>
         </div>
         <div className='info'>
