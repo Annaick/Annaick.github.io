@@ -1,6 +1,7 @@
 import { Typography, Space, Card, Avatar, List, Carousel, Image, Flex, Button} from "antd"
 import { ToolOutlined, EditOutlined, WeiboCircleOutlined, UpCircleOutlined, CodeSandboxOutlined, MessageOutlined, WhatsAppOutlined, LinkedinOutlined, CodeOutlined, EyeOutlined, EditFilled} from "@ant-design/icons"
 import { LinearGradient } from 'react-text-gradients'
+import { Slide, Fade } from "react-awesome-reveal"
 
 import {Swiper, SwiperSlide} from 'swiper/react'
 import 'swiper/css'
@@ -140,20 +141,28 @@ export default function Main(){
         <section className="skills">
             <Title className="sectionHeading" id="skills" style={{margin: '0px'}}><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>SKILLS</LinearGradient></Title>
             <List className="skillsList" itemLayout="horizontal" dataSource={list} renderItem={(item)=>{
-                 return (<List.Item>
+                 return (<Slide direction="up" triggerOnce>
+                    <Fade triggerOnce>
+                    <List.Item>
                     <List style={{width: '100%'}} grid={{column: 2, gutter: 100, sm: 4, md: 4, lg: 4, xl: 4, xxl: 4}} itemLayout="horizontal" header={<h3>{item.heading}</h3>} dataSource={item.content} renderItem={(tech)=>{
                         return (<List.Item style={{height: '3rem'}}>
                             <List.Item.Meta style={{display: 'flex', alignItems: 'center', width: '100%'}} avatar={<img src={tech.icon} className="icon"></img>} title={tech.title}></List.Item.Meta>
                         </List.Item>)
                     }} />
-                 </List.Item>)
+                 </List.Item>
+                    </Fade>
+                 </Slide>)
             }}>
             </List>
         </section>
         <section className="projects" style={{marginBottom: '50px'}}>
             <Title className="sectionHeading" id="projects"><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>PROJECTS</LinearGradient></Title>
-            <Flex style={{padding: '1rem 3rem'}} align="center" gap={12}><WeiboCircleOutlined></WeiboCircleOutlined><Title level={2} style={{color: 'rgb(62, 78, 92)', fontSize: '1.2rem', textAlign: 'left', margin: '0px'}}> Web </Title></Flex>
-            <Paragraph className="paragraph" style={{padding: '1rem', textAlign: 'left' ,marginBottom: '50px'}}>Here are a few excerpts from my front-end projects. Most of the time, I use <em>react</em> for my applications. It allows great flexibility in the development process.</Paragraph>
+            <Slide direction="up" triggerOnce>
+                <Fade triggerOnce>
+                    <Flex style={{padding: '1rem 3rem'}} align="center" gap={12}><WeiboCircleOutlined></WeiboCircleOutlined><Title level={2} style={{color: 'rgb(62, 78, 92)', fontSize: '1.2rem', textAlign: 'left', margin: '0px'}}> Web </Title></Flex>
+                    <Paragraph className="paragraph" style={{padding: '1rem', textAlign: 'left' ,marginBottom: '50px'}}>Here are a few excerpts from my front-end projects. Most of the time, I use <em>react</em> for my applications. It allows great flexibility in the development process.</Paragraph>
+                </Fade>
+            </Slide>
             <Swiper style={{marginBottom: '5rem'}} effect={"cards"} grabCursor={true} modules={[EffectCards]} className="mySwiper">
                 <SwiperSlide>
                     <Card actions={[<Button type="link" icon={<EyeOutlined></EyeOutlined>} target="_blank" style={{color: 'black'}} href="https://Annaick.github.io/toDo">Preview</Button>, <Button style={{color: 'black'}} target="_blank" type="link" icon={<CodeOutlined></CodeOutlined>} href="https://github.com/Annaick/toDo">Code</Button>]}
@@ -187,8 +196,12 @@ export default function Main(){
                     </Card>
                 </SwiperSlide>
             </Swiper>
-            <Flex style={{padding: '1rem 3rem'}} align="center" gap={12}><EditFilled></EditFilled><Title level={2} style={{color: 'rgb(62, 78, 92)', fontSize: '1.2rem', textAlign: 'left', margin: '0px'}}> Design </Title></Flex>
-            <Paragraph className="paragraph" style={{padding: '1rem', textAlign: 'left', marginBottom: '5rem'}}>I'm first and foremost a <em>front developer</em>, but I think a good front developer needs to know about design. And so I design all my projects and take inspiration from everywhere</Paragraph>
+            <Slide direction="up" triggerOnce>
+                <Fade triggerOnce>
+                    <Flex style={{padding: '1rem 3rem'}} align="center" gap={12}><EditFilled></EditFilled><Title level={2} style={{color: 'rgb(62, 78, 92)', fontSize: '1.2rem', textAlign: 'left', margin: '0px'}}> Design </Title></Flex>
+                    <Paragraph className="paragraph" style={{padding: '1rem', textAlign: 'left', marginBottom: '5rem'}}>I'm first and foremost a <em>front developer</em>, but I think a good front developer needs to know about design. And so I design all my projects and take inspiration from everywhere</Paragraph>
+                </Fade>
+            </Slide>
             <Flex justify="center">
             <Carousel  style={{ margin: '0rem 1rem', borderRadius: '1rem 1rem', maxWidth: '600px'}} autoplay>
                 <Image loading="lazy" className="slider-img" src="/MirrorLogin-01.jpg" alt="Mirror login page design" />

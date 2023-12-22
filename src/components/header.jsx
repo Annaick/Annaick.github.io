@@ -6,6 +6,7 @@ import Hamburger from 'hamburger-react'
 import { useState, Suspense } from 'react'
 import { Img, resource } from 'react-suspense-img'
 import Headroom from 'react-headroom'
+import { Slide, Fade } from "react-awesome-reveal"
 
 const {Title, Paragraph, Text} = Typography
 const items = [
@@ -61,10 +62,13 @@ export default function Header(prop){
                 <Space><Text className='lightText paragraph'>He/Him - 19 years old</Text></Space>
             </Flex>
         </div>
-        <summary>
-            
+        <summary>    
             <Title className='sectionHeading' id='about'><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>ABOUT ME</LinearGradient></Title>
-            <Paragraph className='paragraph' style={{textAlign: 'justify', fontFamily: 'dana light, sans-serif'}}>I am a <em>computer science student</em>. I am passionate about <em>web design and development</em>, and I always bring a touch of innovation to my projects for my own satisfaction and for my clients' satisfaction.</Paragraph>
+            <Slide direction='up' triggerOnce>
+                <Fade triggerOnce>
+                <Paragraph className='paragraph' style={{textAlign: 'justify', fontFamily: 'dana light, sans-serif'}}>I am a <em>computer science student</em>. I am passionate about <em>web design and development</em>, and I always bring a touch of innovation to my projects for my own satisfaction and for my clients' satisfaction.</Paragraph>
+                </Fade>
+            </Slide>
         </summary>
     </>)
 }
