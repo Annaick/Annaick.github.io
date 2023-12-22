@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-headroom": "^3.2.1",
     "react-simple-typewriter": "^5.0.1",
+    "react-suspense-img": "^0.2.0",
     "react-text-gradients": "^1.0.2",
     "swiper": "^11.0.5"
   },

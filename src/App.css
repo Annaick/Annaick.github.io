@@ -48,7 +48,7 @@ src: local('/dana medium') format('woff');
 body{
   padding: 0px;
   margin: 0px;
-  background-color: rgb(238, 245, 242);
+  background-color: rgb(247, 247, 247);
 }
 
 
@@ -95,7 +95,7 @@ nav{
   max-height: 40px;
   box-sizing: border-box;
   padding: 1rem 2rem;
-  background-color: rgb(238, 245, 242);
+  background-color: rgb(247, 247, 247);
   @media screen and (min-width: 800px) {
     max-height: 100px;
   }

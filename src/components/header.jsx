@@ -1,9 +1,10 @@
-import {Dropdown, Button, Flex, Typography, Space, Anchor} from 'antd'
+import {Dropdown, Button, Flex, Typography, Space, Anchor, Skeleton} from 'antd'
 import { ContactsOutlined, BookOutlined, ProjectOutlined, CustomerServiceOutlined, PhoneOutlined, DownloadOutlined, HomeOutlined, ReadOutlined  } from '@ant-design/icons'
-import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import { useTypewriter } from 'react-simple-typewriter'
 import { LinearGradient } from 'react-text-gradients'
 import Hamburger from 'hamburger-react'
-import { useEffect, useState } from 'react'
+import { useState, Suspense } from 'react'
+import { Img, resource } from 'react-suspense-img'
 import Headroom from 'react-headroom'
 
 const {Title, Paragraph, Text} = Typography
@@ -20,6 +21,11 @@ const items = [
     },
 ]
 
+
+resource.preloadImage('/annaick__logo.svg')
+resource.preloadImage ('/pngtree__photo1.png')
+
+
 export default function Header(prop){
     const [open, SetOpen]= useState (false)
     const [message] = useTypewriter({
@@ -32,7 +38,9 @@ export default function Header(prop){
                     <Dropdown  menu={{items}} open={open} onOpenChange={e=>SetOpen(!open)} trigger={'click'}>
                         <Button className='center' aria-label='Navigation menu'  type='text' icon={<Hamburger toggled={open} direction='right' hideOutline label='Open navigation menu' rounded  size={20} color='rgb(62, 78, 92)'></Hamburger>}></Button>
                     </Dropdown>
-                    <img src={prop.logo} className='icon logo' alt="annaick logo" />
+                    <Suspense fallback={<Skeleton active paragraph={{rows: 1}}></Skeleton>}>
+                        <Img src='/annaick__logo.svg' alt='Annaick Logo' className='icon logo'></Img>
+                    </Suspense>
                 </Flex>
             </nav>
         </Headroom>
@@ -43,7 +51,9 @@ export default function Header(prop){
                 <p className='header-presentation__name-after'>TIANA</p>
                 <Title style={{fontSize: '1rem', color: 'rgb(62, 78, 92)', marginBottom: '30px'}}>Front-end react eveloper & UI/UX Designer</Title>
                 <Button icon={<DownloadOutlined></DownloadOutlined>} href='/annaick__CV.pdf' download classNames='fluent' type='primary' aria-label='click to download cv'>DOWNLOAD CV</Button>
-                <img src={prop.bg} alt="web development illustration" className='background' />
+                <Suspense fallback={<Skeleton.Image active style={{width:'100vw', height:'350px', marginTop: '50px'}}></Skeleton.Image>}>
+                    <Img src='/pngtree__photo1.png' alt='Web development illustration' className='background'></Img>
+                </Suspense>
             </Flex>
         </div>
         <div className='info'>
