@@ -38,9 +38,7 @@ export default function Header(prop){
                     <Dropdown  menu={{items}} open={open} onOpenChange={e=>SetOpen(!open)} trigger={'click'}>
                         <Button className='center' aria-label='Navigation menu'  type='text' icon={<Hamburger toggled={open} direction='right' hideOutline label='Open navigation menu' rounded  size={20} color='rgb(62, 78, 92)'></Hamburger>}></Button>
                     </Dropdown>
-                    <Suspense fallback={<Skeleton active paragraph={{rows: 1}}></Skeleton>}>
-                        <Img src='/annaick__logo.svg' alt='Annaick Logo' className='icon logo'></Img>
-                    </Suspense>
+                    <Img src='/annaick__logo.svg' alt='Annaick Logo' className='icon logo'></Img>
                 </Flex>
             </nav>
         </Headroom>

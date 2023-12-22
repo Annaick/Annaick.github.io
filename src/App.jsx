@@ -24,7 +24,7 @@ function App() {
         components:{
         }
       }}>
-        <Header logo={logoSrc} bg = {bgSrc} />
+        <Header/>
         <Main />
         <Footer />
       </ConfigProvider>
