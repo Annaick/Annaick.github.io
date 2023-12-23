@@ -82,11 +82,10 @@ export default function Header(prop){
         </div>
         <summary>    
             <Title className='sectionHeading' id='about'><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>ABOUT ME</LinearGradient></Title>
-            <Slide direction='up' triggerOnce>
-                <Fade triggerOnce>
+            <Fade triggerOnce>
                 <p className='paragraph lightText' style={{textAlign: 'justify'}}>I am a <em>computer science student</em>. I am passionate about <em>web design and development</em>, and I always bring a touch of innovation to my projects for my own satisfaction and for my clients' satisfaction.</p>
-                </Fade>
-            </Slide>
+            </Fade>
+
         </summary>
     </>)
 }
