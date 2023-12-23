@@ -124,9 +124,9 @@ export default function Main(){
             <List className="servicesList" style={{padding: '1rem'}} grid={{column: 2, md: 4, lg: 4, xl: 4, xxl: 4, gutter: 15}} dataSource={services} renderItem={(item)=>{
                 return (
                     <List.Item>
-                    <Card size="small" className="dark service">
+                    <Card size="small" className="dark service gradient">
                         <Space direction="vertical">
-                            <Avatar shape="square" size='large' className="green service__icon" icon={item.icon}></Avatar>
+                            <Avatar shape="square" size='large' className="service__icon" icon={item.icon}></Avatar>
                             <Title className="service__heading" style={{color: 'white', fontSize: '1rem'}} level={2}>{item.heading}</Title>
                             <Paragraph className="service__content" style={{fontSize: '0.8rem', color: 'white', textAlign: 'justify', wordBreak: 'break-all', hyphens: 'auto', lineBreak:'auto', fontFamily: 'dana light, sans-serif'}}>
                                 {item.content}
@@ -146,7 +146,7 @@ export default function Main(){
                     <List.Item>
                     <List style={{width: '100%'}} grid={{column: 2, gutter: 100, sm: 4, md: 4, lg: 4, xl: 4, xxl: 4}} itemLayout="horizontal" header={<h3>{item.heading}</h3>} dataSource={item.content} renderItem={(tech)=>{
                         return (<List.Item style={{height: '3rem'}}>
-                            <List.Item.Meta style={{display: 'flex', alignItems: 'center', width: '100%'}} avatar={<img src={tech.icon} className="icon"></img>} title={tech.title}></List.Item.Meta>
+                            <List.Item.Meta style={{display: 'flex', alignItems: 'center', width: '100%'}} avatar={<img src={tech.icon} className="icon"></img>} title={<p>{tech.title}</p>}></List.Item.Meta>
                         </List.Item>)
                     }} />
                  </List.Item>
@@ -160,7 +160,7 @@ export default function Main(){
             <Slide direction="up" triggerOnce>
                 <Fade triggerOnce>
                     <Flex style={{padding: '1rem 3rem'}} align="center" gap={12}><WeiboCircleOutlined></WeiboCircleOutlined><Title level={2} style={{color: 'rgb(62, 78, 92)', fontSize: '1.2rem', textAlign: 'left', margin: '0px'}}> Web </Title></Flex>
-                    <Paragraph className="paragraph" style={{padding: '1rem', textAlign: 'left' ,marginBottom: '50px'}}>Here are a few excerpts from my front-end projects. Most of the time, I use <em>react</em> for my applications. It allows great flexibility in the development process.</Paragraph>
+                    <Paragraph className="paragraph" style={{padding: '1rem', textAlign: 'left' ,marginBottom: '50px', color:'rgb(189, 202, 197)'}}>Here are a few excerpts from my front-end projects. Most of the time, I use <em>react</em> for my applications. It allows great flexibility in the development process.</Paragraph>
                 </Fade>
             </Slide>
             <Swiper style={{marginBottom: '5rem'}} effect={"cards"} grabCursor={true} modules={[EffectCards]} className="mySwiper">
@@ -199,7 +199,7 @@ export default function Main(){
             <Slide direction="up" triggerOnce>
                 <Fade triggerOnce>
                     <Flex style={{padding: '1rem 3rem'}} align="center" gap={12}><EditFilled></EditFilled><Title level={2} style={{color: 'rgb(62, 78, 92)', fontSize: '1.2rem', textAlign: 'left', margin: '0px'}}> Design </Title></Flex>
-                    <Paragraph className="paragraph" style={{padding: '1rem', textAlign: 'left', marginBottom: '5rem'}}>I'm first and foremost a <em>front developer</em>, but I think a good front developer needs to know about design. And so I design all my projects and take inspiration from everywhere</Paragraph>
+                    <Paragraph className="paragraph" style={{padding: '1rem', textAlign: 'left', marginBottom: '5rem', color:'rgb(189, 202, 197)'}}>I'm first and foremost a <em>front developer</em>, but I think a good front developer needs to know about design. And so I design all my projects and take inspiration from everywhere</Paragraph>
                 </Fade>
             </Slide>
             <Flex justify="center">

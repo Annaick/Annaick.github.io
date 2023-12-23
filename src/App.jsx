@@ -22,6 +22,9 @@ function App() {
           fontSizeHeading1: '1.8rem'
         },
         components:{
+          Anchor:{
+            colorText: '#fff'
+          }
         }
       }}>
         <Header/>
