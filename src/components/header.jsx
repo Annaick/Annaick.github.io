@@ -1,4 +1,4 @@
-import {Dropdown, Button, Flex, Typography, Space, Anchor, Skeleton} from 'antd'
+import {Dropdown, Button, Flex, Typography, Space, Anchor, Spin} from 'antd'
 import { ContactsOutlined, BookOutlined, ProjectOutlined, CustomerServiceOutlined, PhoneOutlined, DownloadOutlined, HomeOutlined, ReadOutlined  } from '@ant-design/icons'
 import { useTypewriter } from 'react-simple-typewriter'
 import { LinearGradient } from 'react-text-gradients'
@@ -26,6 +26,7 @@ const items = [
 
 resource.preloadImage('/annaick__logo.svg')
 resource.preloadImage ('/pngtree__photo1.png')
+resource.preloadImage('/annaick__photo--sm.jpg')
 
 
 export default function Header(prop){
@@ -50,7 +51,7 @@ export default function Header(prop){
                 <p className='header-presentation__name'><LinearGradient gradient={["to right", "#00afff, #00ff8f"]}>ANNAICK</LinearGradient></p>
                 <p className='header-presentation__name-after'>TIANA</p>
                 <Title className='lightText' style={{fontSize: '1rem', marginBottom: '30px', marginTop: '10px'}}>Front-end react eveloper & UI/UX Designer</Title>
-                <Button icon={<DownloadOutlined></DownloadOutlined>} href='/annaick__CV.pdf' download classNames='fluent' type='primary' aria-label='click to download cv'>DOWNLOAD CV</Button>
+                <Button className='download' icon={<DownloadOutlined></DownloadOutlined>} href='/annaick__CV.pdf' download classNames='fluent' type='primary' aria-label='click to download cv'>DOWNLOAD CV</Button>
                 <div className='background' style={{position: 'relative'}}>
                 <Goo>
                 <svg className='background'>
@@ -62,7 +63,9 @@ export default function Header(prop){
                 </svg>
                 </Goo>
                 <section className="profil">
-                    <img src="/annaick__photo--sm.jpg" alt="Annaick profil pic" />
+                    <Suspense fallback={<Spin></Spin>}>
+                        <img src="/annaick__photo--sm.jpg" alt="Annaick profil pic" />
+                    </Suspense>
                 </section>
                 </div>
                 {/*<Suspense fallback={<Skeleton.Image active style={{width:'100vw', height:'350px', marginTop: '50px'}}></Skeleton.Image>}>
