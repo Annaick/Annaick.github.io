@@ -163,6 +163,12 @@ export default function Main(){
             </Fade>
             <Swiper style={{marginBottom: '5rem'}} effect={"cards"} grabCursor={true} modules={[EffectCards]} className="mySwiper">
                 <SwiperSlide>
+                    <Card actions={[<Button type="link" icon={<EyeOutlined></EyeOutlined>} target="_blank" style={{color: 'black'}} href="https://romula.vercel.app">Preview</Button>]}
+                     className="project" cover={<img className="cover" src="/romula.png" alt="Romula company website pic"></img>}>
+                        <Card.Meta title='Website for romula company' description={'I was commissioned to create a website for the company ROMULA to increase their visibility'}></Card.Meta>
+                    </Card>
+                </SwiperSlide>
+                <SwiperSlide>
                     <Card actions={[<Button type="link" icon={<EyeOutlined></EyeOutlined>} target="_blank" style={{color: 'black'}} href="https://Annaick.github.io/toDo">Preview</Button>, <Button style={{color: 'black'}} target="_blank" type="link" icon={<CodeOutlined></CodeOutlined>} href="https://github.com/Annaick/toDo">Code</Button>]}
                      className="project" cover={<img className="cover" src="/todo.png" alt="Todo application pic"></img>}>
                         <Card.Meta title='ToDo' description={'A todo application for managing tasks. All CRUD operations are included and tasks are stored using the web storage API.'}></Card.Meta>
