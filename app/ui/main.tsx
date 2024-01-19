@@ -11,7 +11,7 @@ export default function Main (){
             <img className="absolute right-[-50px] md:w-[500px] w-[300px]" src="/images/gradient--orange.png" alt="" />
             <h1 className="mb-4 md:text-2xl">Servives</h1>
             <p className="text-sm mb-10 text-default-600">Mes services sont axés sur <span className="text-orange-500">la conception et le developement web</span>, qui comprennent:</p>
-            <Slide cascade triggerOnce delay={0} duration={300}>
+            <Slide cascade triggerOnce delay={0} duration={150}>
             <ul aria-label="liste des services">
                 <li>
                     <Card className="p-4 mb-4 border-2 border-none bg-default-50/40 backdrop-blur-sm flex-row gap-4">
