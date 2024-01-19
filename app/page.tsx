@@ -1,47 +1,20 @@
-'use client'
+'use server'
 
-import Loader from "./ui/loader"
-//import  Presentation  from "./ui/presentation"
-//import  Summary  from "./ui/summary"
-//import Main from "./ui/main"
-//import  Competence  from "./ui/competence"
-//import  Projet  from "./ui/projets"
-//import  Contact  from "./ui/contact"
-//import  Footer  from "./ui/footer"
-import { lazy, Suspense, useEffect, useState } from "react"
+import Home from "./app"
+import { Metadata } from "next"
 
-const Presentation = lazy(()=>import ("./ui/presentation"))
-const Summary = lazy(()=>import ("./ui/summary"))
-const Main = lazy(()=>import ("./ui/main"))
-const Competence = lazy(()=>import ("./ui/competence"))
-const Projet = lazy(()=>import ("./ui/projets"))
-const Contact = lazy(()=>import ("./ui/contact"))
-const Footer = lazy(()=>import ("./ui/footer"))
-
-
-
-export default function Home() {
-  const [isReady, setIsReady] = useState (false)
-  useEffect(()=>{
-    setTimeout (()=>{
-      setIsReady (true)
-    }, 2000)
-  }, [])
-
-  if (!isReady){
-    return (
-      <Loader></Loader>
-    )
+export const metadata: Metadata ={
+  title: 'Tiana Annaick - Développeur web Full stack - MERN',
+  description: 'Je suis un développeur web indépendant avec 3 années d\'expériences. Je me passione pour le language Javascript et ses frameworks',
+  creator: 'Tiana Annaick',
+  openGraph:{
+    title: 'Tiana Annaick - Développeur web full stack MERN',
+    description: 'Je suis un développeur web indépendant avec 3 années d\'expériences. Je me passione pour le language Javascript et ses frameworks'
   }
-  return (
-    <main className="p-4">
-        <Presentation></Presentation>
-        <Summary></Summary>
-        <Main></Main>
-        <Competence></Competence>
-        <Projet></Projet>
-        <Contact></Contact>
-        <Footer></Footer>
-    </main>
+}
+
+export default function Page(){
+  return(
+    <Home></Home>
   )
 }
