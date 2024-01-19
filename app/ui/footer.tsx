@@ -9,22 +9,22 @@ export default function Footer (){
                 <nav>
                     <ul aria-label="Les sections de la page web list-disc">
                         <li className="mb-1">
-                            <Link className="text-default-100 dark:text-default-500 text-xs" href="/documents/annaick__CV--2024.pdf">Download CV</Link>
+                            <Link className="text-default-700 dark:text-default-500 text-xs" href="/documents/annaick__CV--2024.pdf">Download CV</Link>
                         </li>
                         <li className="mb-1">
-                            <Link className="text-default-100 dark:text-default-500 text-xs" href="#presentation">Presentation</Link>
+                            <Link className="text-default-700 dark:text-default-500 text-xs" href="#presentation">Presentation</Link>
                         </li>
                         <li className="mb-1">
-                            <Link className="text-default-100 dark:text-default-500 text-xs" href="#aPropos">A propos</Link>
+                            <Link className="text-default-700 dark:text-default-500 text-xs" href="#aPropos">A propos</Link>
                         </li>
                         <li className="mb-1">
-                            <Link className="text-default-100 dark:text-default-500 text-xs" href="#services">Services</Link>
+                            <Link className="text-default-700 dark:text-default-500 text-xs" href="#services">Services</Link>
                         </li>
                         <li className="mb-1">
-                            <Link className="text-default-100 dark:text-default-500 text-xs" href="#competences">Compétences</Link>
+                            <Link className="text-default-700 dark:text-default-500 text-xs" href="#competences">Compétences</Link>
                         </li>
                         <li className="mb-1">
-                            <Link className="text-default-100 dark:text-default-500 text-xs" href="#projets">Projets</Link>
+                            <Link className="text-default-700 dark:text-default-500 text-xs" href="#projets">Projets</Link>
                         </li>
                     </ul>
                 </nav>
