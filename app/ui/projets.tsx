@@ -36,7 +36,7 @@ const list = [
         title: 'Dashboard',
         content: 'Une plateforme pour gérer les clients d\'une entreprise à partir d\'une base de donnéees distante et intégrant un système d\'authentification',
         image: '/projects/dashboard.png',
-        link: 'https://nextjs-dashboard-delta-neon.vercel.app'
+        link: 'https://dashboard-next3.vercel.app'
     },
     {
         title: 'Wakanda',
