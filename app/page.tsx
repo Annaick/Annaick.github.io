@@ -1,5 +1,3 @@
-'use server'
-
 import Home from "./app"
 import { Metadata } from "next"
 

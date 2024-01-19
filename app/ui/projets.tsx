@@ -33,6 +33,12 @@ const list = [
         link: 'https://Annaick.github.io/Shopee'
     },
     {
+        title: 'Dashboard',
+        content: 'Une plateforme pour gérer les clients d\'une entreprise à partir d\'une base de donnéees distante et intégrant un système d\'authentification',
+        image: '/projects/dashboard.png',
+        link: 'https://nextjs-dashboard-delta-neon.vercel.app'
+    },
+    {
         title: 'Wakanda',
         content: 'Un site web dedié à l\'univers de wakanda écris en vanilla Javascript(animations, transitions...)',
         image: '/projects/wakanda.png',
