@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(()=>{
     setTimeout (()=>{
       setIsReady (true)
-    }, 2000)
+    }, 500)
   }, [])
 
   if (!isReady){
