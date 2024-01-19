@@ -21,9 +21,20 @@ const Footer = lazy(()=>import ("./ui/footer"))
 
 
 export default function Home() {
+  const [isReady, setIsReady] = useState (false)
+  useEffect(()=>{
+    setTimeout (()=>{
+      setIsReady (true)
+    }, 2000)
+  }, [])
+
+  if (!isReady){
+    return (
+      <Loader></Loader>
+    )
+  }
   return (
     <main className="p-4">
-      <Suspense fallback={<Loader></Loader>}>
         <Presentation></Presentation>
         <Summary></Summary>
         <Main></Main>
@@ -31,7 +42,6 @@ export default function Home() {
         <Projet></Projet>
         <Contact></Contact>
         <Footer></Footer>
-      </Suspense>
     </main>
   )
 }

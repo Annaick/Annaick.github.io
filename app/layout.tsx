@@ -17,11 +17,11 @@ export default function RootLayout({
     if (typeof window != "undefined"){
       let save = localStorage.getItem ('darkMode')
       if (save == null || save == undefined){
-        return false
+        return true
       }
       return JSON.parse(save)
     }
-    return false
+    return true
   })
   const [darkMode, setDarkMode] = useState (locale)
   const [selectedMode, setSelectedMode] = useState<boolean>()
