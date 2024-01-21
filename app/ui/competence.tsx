@@ -3,7 +3,7 @@ import { Slide, Bounce } from "react-awesome-reveal"
 
 const list = [
     {
-        heading: 'Programming languages',
+        heading: 'Languages de programmation',
         content: [
             {title: 'Javascript', icon: '/icons/javascript-1.svg'},
             {title: 'Typescript', icon: '/icons/typescript.svg'},
@@ -13,7 +13,7 @@ const list = [
         ]
     },
     {
-        heading: 'Web technologies',
+        heading: 'Technologies web',
         content: [
             {title: 'HTML', icon: '/icons/html-1.svg'},
             {title: 'CSS', icon: '/icons/css-3.svg'},
@@ -22,7 +22,7 @@ const list = [
         ]
     },
     {
-        heading: 'Frameworks and librairies',
+        heading: 'Frameworks et librairies',
         content: [
             {title: 'NextJS', icon: '/icons/nextjs.svg'},
             {title: 'React', icon: '/icons/react-2.svg'},
@@ -35,7 +35,7 @@ const list = [
         ]
     },
     {
-        heading: 'Development tools',
+        heading: 'Outils de dévelopement',
         content: [
             {title: 'MongoDB', icon: '/icons/mongodb-original-wordmark.svg'},
             {title: 'Wordpress', icon: '/icons/wordpress.svg'},
@@ -48,7 +48,7 @@ const list = [
 
     },
     {
-        heading: 'Graphic design software',
+        heading: 'Outils graphiques',
         content: [
             {title: 'Illustrator', icon: '/icons/illustrator.svg'},
             {title: 'XD', icon: '/icons/xd.svg'},

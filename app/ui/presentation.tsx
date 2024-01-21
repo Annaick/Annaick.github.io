@@ -26,7 +26,7 @@ export default function Presentation(){
             </div>
         </div>
         <div className="md:flex">
-            <Link download href="/documents/annaick__CV--2024.pdf" >
+            <Link download href="/annaick__CV--2024.pdf" >
                 <Button className="bg-gradient-to-r from-purple-500 to-cyan-700 text-white">Télécharger CV</Button>
             </Link>
         </div>
