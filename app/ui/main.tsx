@@ -53,7 +53,7 @@ export default function Main (){
                         <div>
                             <h2 className="mb-2 text-sm">Design</h2>
                             <p className="text-xs text-default-500">
-                                Le design n'implique pas seulement la beauté, mais tout ce qui concerce l'expérience utilisateur. 
+                                Le design n&apos;implique pas seulement la beauté, mais tout ce qui concerce l&apos;expérience utilisateur. 
                             </p>
                         </div>
                     </Card>
