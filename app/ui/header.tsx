@@ -40,7 +40,7 @@ export default function Header (props: any){
                     </Button>
                 </NavbarItem>  
                 <NavbarItem className="hidden md:block">
-                    <Link download href="/annaick__CV--2024.pdf">
+                    <Link download href="/Annaick__CV--2024.pdf">
                         <Button variant="bordered">Télécharger CV</Button>
                     </Link>
                 </NavbarItem> 
