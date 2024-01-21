@@ -51,9 +51,9 @@ export default function Main (){
                     <Card className="p-4 mb-4 border-2 border-none bg-default-50/40 backdrop-blur-sm flex-row gap-4">
                         <IconCardsFilled className="border-solid border-white text-cyan-500"></IconCardsFilled>
                         <div>
-                            <h2 className="mb-2 text-sm">Création de sites webs</h2>
+                            <h2 className="mb-2 text-sm">Design</h2>
                             <p className="text-xs text-default-500">
-                                Création de site web adaptés à vos besoins, flexible, responsive et accessible
+                                Le design n'implique pas seulement la beauté, mais tout ce qui concerce l'expérience utilisateur. 
                             </p>
                         </div>
                     </Card>
