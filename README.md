@@ -1,3 +1,7 @@
+
+![Tiana-Annaick-Développeur-web-Full-stack-MERN-10-19-2024_05_36_PM](https://github.com/user-attachments/assets/4f6c1753-f815-419d-9573-c90348bc6c53)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
